@@ -1,0 +1,43 @@
+.myButton {
+	background-color:#44c767;
+	border-radius:14px;
+	border:1px solid #3a8a42;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	padding:11px 43px;
+	text-decoration:none;
+}
+.myButton:hover {
+	background-color:#5cbf2a;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.myButtonSold {
+	cursor: not-allowed;
+	pointer-events: none;
+	
+	background-color:#c21414;
+	border-radius:14px;
+	border:1px solid #ff0000e5;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	padding:11px 43px;
+	text-decoration:none;
+}
+.myButtonSold:hover {
+	background-color:#e92a08;
+}
+.myButtonSold:active {
+	position:relative;
+	top:1px;
+}
+        

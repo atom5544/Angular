@@ -1,0 +1,23 @@
+<div>
+    <div>
+        <p>{{ product.id }}</p>
+        <p>{{ product.title }}</p>
+        <p>{{ product.price | number }}</p>
+        <img [src]="product.image" [alt]="product.title" width="150" height="150">
+    </div>
+    
+    <button 
+        class="border py-2 px-4 rounded"
+        [ngClass]="{
+            'bg-yellow-400' : !details,
+            'bg-yellow-200' : details
+        }"
+        (click)="details = !details">
+        {{details ? 'Hide' : 'Show'}} desc
+    </button>
+
+    <div *ngIf="details">
+        <p>{{product.description}}</p>
+        <p>Rating: <span [ngStyle]="{frontWeight: 'bold'}">{{product.rating.rate | number }}</span></p>
+    </div>
+</div>

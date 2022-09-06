@@ -1,0 +1,20 @@
+<div *ngIf="item">
+    <p>Id: {{ item.id }}</p>
+    <p>Price: {{ item.price }}</p>
+    <div>
+        <button class="myButton" (click)="Description()">{{showDesc ? 'Hide' : 'Show'}} description</button>
+        <p *ngIf="showDesc">Title: {{ item.title }}</p>
+    </div>
+
+    <p>Total count: {{ item.totalCount > 0 ? item.totalCount : "All was sold" }}</p>
+    <button [ngClass]="
+    {
+        'myButton': item.totalCount > 0,
+        'myButtonSold': item.totalCount <= 0
+    }" 
+    type="button" class="btn btn-default" (click)="Buy()">
+        Buy
+    </button>
+</div>
+
+<div *ngIf="!item">Opps</div>
